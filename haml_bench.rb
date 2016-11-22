@@ -5,5 +5,5 @@ require 'benchmark'
 haml = Haml::Engine.new(File.read(File.dirname(__FILE__) + '/views/view.html.haml'))
 
 Benchmark.bm do |x|
-  x.report { 10_000.times { haml.render(Object.new, data: @data) } }
+  x.report { 100_000.times { haml.render(Object.new, data: @data) } }
 end

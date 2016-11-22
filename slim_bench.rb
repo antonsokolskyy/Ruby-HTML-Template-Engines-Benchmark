@@ -5,5 +5,5 @@ require 'benchmark'
 slim = Slim::Template.new(File.dirname(__FILE__) + '/views/view.html.slim')
 
 Benchmark.bm do |x|
-  x.report { 10_000.times { slim.render(Object.new, data: @data) } }
+  x.report { 100_000.times { slim.render(Object.new, data: @data) } }
 end

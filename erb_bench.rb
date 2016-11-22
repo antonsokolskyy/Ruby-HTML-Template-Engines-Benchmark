@@ -5,5 +5,5 @@ require 'benchmark'
 erb = ERB.new(File.read(File.dirname(__FILE__) + '/views/view.html.erb'))
 
 Benchmark.bm do |x|
-  x.report { 10_000.times { erb.result(binding) } }
+  x.report { 100_000.times { erb.result(binding) } }
 end
