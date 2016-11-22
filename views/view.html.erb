@@ -1,0 +1,23 @@
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+REFORMABLE TEST: <%= @data[:mode] %>
+<hr>
+<% if @data[:PERFORM] %>
+  <% @data[:PERFORM][:LIST].each do |item| %>
+    <p> <%= item[:RID] %> [<%= item[:ODD] %>] NAME: <%= item[:NAME] %>
+    <% if item[:NAME] == 'line000001' %>
+      SPECIAL NAME [<%= item[:NAME]%>]!!!!
+    <% end %>
+    <% if item[:SUB] %>
+      <% item[:SUB].each do |sub| %>
+        <br> <%= sub[:XXX] %> = <%= sub[:value] %>
+      <% end %>
+    <% end %>
+    <% if item[:DOT] %>
+      <% item[:DOT].each do |dot| %>
+        <br> DOT: <%= dot[:DA][:DB][:DC][:DD] %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<hr>
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
